@@ -1,6 +1,6 @@
 {
   "name": "bump-tag",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Bump version and add tag",
   "keywords": [
     "bump",
