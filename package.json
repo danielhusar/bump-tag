@@ -1,0 +1,37 @@
+{
+  "name": "bump-tag",
+  "version": "0.0.1",
+  "description": "Bump version and add tag",
+  "keywords": [
+    "bump",
+    "tag",
+    "git",
+    "version"
+  ],
+  "bin": {
+    "bump": "cli.js"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "author": {
+    "name": "Daniel Husár",
+    "email": "dano.husar@gmail.com"
+  },
+  "files": [
+    "cli.js",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielhusar/bump-tag"
+  },
+  "dependencies": {
+    "semver": "^2.3.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.2",
+    "should": "^3.3.1"
+  },
+  "readmeFilename": "Readme.md"
+}
