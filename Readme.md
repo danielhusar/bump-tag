@@ -2,6 +2,8 @@
 
 Increment version in your package.json and add git tag to the repo.
 
+I have created this cli mainly because I keep forgetting to add tag when I bump the version.
+
 ## Install
 
 ```
@@ -31,7 +33,7 @@ Type: `String`
 Default: 'patch'
 
 Major, Minor or Patch.
-Check (node-semver)[https://github.com/isaacs/node-semver#functions] inc release parameter.
+Check [node-semver](https://github.com/isaacs/node-semver#functions) inc release parameter.
 
 #### indentation
 
