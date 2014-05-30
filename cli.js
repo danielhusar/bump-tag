@@ -1,8 +1,13 @@
 #!/usr/bin/env node
 'use strict';
 var fs = require('fs');
-var sd = require('./index');
 var semver = require('semver');
+var sys = require('sys')
+var exec = require('child_process').exec;
+
+function puts(error, stdout, stderr) {
+  sys.puts(stdout)
+};
 
 function help() {
   console.log('Usage:');
@@ -36,8 +41,9 @@ function init() {
     });
 
     pkg.version = semver.inc(pkg.version, type);
+    exec("git tag " + pkg.version, puts);
     fs.writeFileSync(process.cwd() + '/package.json', JSON.stringify(pkg, null, indentation));
-  }catch(e) {
+  } catch(e) {
     console.warn('Error:', e);
   }
 }
