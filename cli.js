@@ -2,12 +2,12 @@
 'use strict';
 var fs = require('fs');
 var semver = require('semver');
-var sys = require('sys')
+var sys = require('sys');
 var exec = require('child_process').exec;
 
-function puts(error, stdout, stderr) {
+function puts (error, stdout, stderr) {
   sys.puts(stdout);
-};
+}
 
 function help() {
   console.log('Usage:');
@@ -29,18 +29,18 @@ function init() {
 
     process.argv.forEach(function (val) {
       var item = val.split('=');
-      if(item[0] === '-t' || item[0] === '--type') {
+      if (item[0] === '-t' || item[0] === '--type') {
         type = item[1];
       }
-      if(item[0] === '-g' || item[0] === '--git') {
+      if (item[0] === '-g' || item[0] === '--git') {
         git = Number(item[1]);
       }
-      if(item[0] === '-i' || item[0] === '--indentation') {
-        if(!isNaN(Number(item[1]))){
+      if (item[0] === '-i' || item[0] === '--indentation') {
+        if (!isNaN(Number(item[1]))) {
           item[1] = Number(item[1]);
         }
         indentation = item[1];
-        if(indentation === 'tab'){
+        if (indentation === 'tab') {
           indentation = '\t';
         }
       }
@@ -48,7 +48,7 @@ function init() {
 
     pkg.version = semver.inc(pkg.version, type);
     fs.writeFileSync(process.cwd() + '/package.json', JSON.stringify(pkg, null, indentation));
-    if(git){
+    if (git) {
       setTimeout(function(){
         exec('git tag ' + pkg.version, puts);
         exec('git add package.json', puts);
