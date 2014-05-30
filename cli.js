@@ -54,6 +54,7 @@ function init() {
         exec('git add package.json', puts);
         exec('git commit -m "bump to "'+ pkg.version, puts);
         exec('git push origin master --tags', puts);
+        exec('npm publish', puts);
       }, 100);
     }
   } catch(e) {
