@@ -40,12 +40,14 @@ Check [node-semver](https://github.com/isaacs/node-semver#functions) inc release
 
 Type: `String`  
 Default: 2
+
 Indentation for the package.json
 
 #### git
 
 Type: `Number`  
 Default: 1
+
 Enable/disable adding git tags and pushing it to origin
 
 ## License
