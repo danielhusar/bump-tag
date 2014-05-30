@@ -55,7 +55,7 @@ function init() {
         exec('git commit -m "bump to "'+ pkg.version, puts);
         exec('git push origin master --tags', puts);
         exec('npm publish', puts);
-      }, 100);
+      }, 200);
     }
   } catch(e) {
     console.warn('Error:', e);
