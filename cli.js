@@ -47,13 +47,13 @@ function init() {
     });
 
     pkg.version = semver.inc(pkg.version, type);
+    fs.writeFileSync(process.cwd() + '/package.json', JSON.stringify(pkg, null, indentation));
     if(git){
       exec('git tag ' + pkg.version, puts);
       exec('git add package.json', puts);
       exec('git commit -m "bump to "'+ pkg.version, puts);
       exec('git push origin master', puts);
     }
-    fs.writeFileSync(process.cwd() + '/package.json', JSON.stringify(pkg, null, indentation));
   } catch(e) {
     console.warn('Error:', e);
   }
