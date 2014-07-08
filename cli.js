@@ -44,6 +44,14 @@ function init() {
           indentation = '\t';
         }
       }
+
+      //direct passing type
+      if (val === 'major') {
+        type = 'major';
+      }
+      if (val === 'minor') {
+        type = 'minor';
+      }
     });
 
     pkg.version = semver.inc(pkg.version, type);
