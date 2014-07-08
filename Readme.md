@@ -1,6 +1,6 @@
 # bump-tag [![Build Status](https://travis-ci.org/danielhusar/bump-tag.svg)](https://travis-ci.org/danielhusar/bump-tag)
 
-Increment version in your package.json and add git tag to the repo, and at the end publish the library to npm.
+Increment version in your package.json and add git tag to the repo.
 
 I have created this cli mainly because I keep forgetting to add tag when I bump the version.
 
@@ -48,7 +48,7 @@ Indentation for the package.json
 Type: `Number`  
 Default: 1
 
-Enable/disable adding git tags and pushing it to origin
+Enable/disable adding git tags
 
 ## License
 

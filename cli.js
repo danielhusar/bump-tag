@@ -51,10 +51,6 @@ function init() {
     if (git) {
       setTimeout(function(){
         exec('git tag ' + pkg.version, puts);
-        exec('git add package.json', puts);
-        exec('git commit -m "bump to "'+ pkg.version, puts);
-        exec('git push origin master --tags', puts);
-        exec('npm publish', puts);
       }, 200);
     }
   } catch(e) {
