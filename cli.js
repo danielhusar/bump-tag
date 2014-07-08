@@ -48,11 +48,8 @@ function init() {
       }
 
       //direct passing type
-      if (val === 'major') {
-        type = 'major';
-      }
-      if (val === 'minor') {
-        type = 'minor';
+      if (val === 'major' || val === 'minor') {
+        type = val;
       }
     });
 

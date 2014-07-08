@@ -36,4 +36,16 @@ describe('CLI test', function(){
     }, 400);
   });
 
+  it('It should work with direct version', function (cb) {
+    exec('node ./cli.js -g=0 minor', puts);
+    setTimeout(function(){
+      fs.readFile(process.cwd() + '/package.json', function read(err, data) {
+        data = JSON.parse(data);
+        (Number(pkg.version.split('.')[1]) + 1).should.equal(Number(data.version.split('.')[1]));
+        fs.writeFileSync(process.cwd() + '/package.json', JSON.stringify(pkg, null, 2));
+        cb();
+      });
+    }, 400);
+  });
+
 });
