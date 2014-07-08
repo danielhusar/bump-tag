@@ -18,6 +18,8 @@ function help() {
   console.log('  $ bump --type=minor --indentation=tab');
   console.log('  $ bump --type=minor --git=0');
   console.log('  $ bump --type=minor --git=0');
+  console.log('  $ bump major');
+  console.log('  $ bump minor');
 }
 
 function init() {

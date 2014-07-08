@@ -23,6 +23,8 @@ Options:
   $ bump --type=major --indentation=4
   $ bump --type=major --indentation=tab
   $ bump --type=major --indentation=tab --git=0
+  $ bump major
+  $ bump minor
 ```
 
 
