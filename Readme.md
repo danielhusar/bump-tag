@@ -13,7 +13,7 @@ npm install --global bump-tag
 ### Sample usage
 
 ```bash
-$ nmq --help
+$ bump --help
 
 Usage:
   $ bump
